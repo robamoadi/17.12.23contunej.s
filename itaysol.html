@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>itay solution</title>
+</head>
+<body>
+    <script>
+        const student_in_class = parseInt(prompt('How many students?'))
+        const arr = new Array(student_in_class).fill(0)
+        for (let i = 0; i < arr.length; i++) {
+            arr[ i ] = parseInt(prompt('Enter grade for student array #' + i))
+        }
+        let sum = 0
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[ i ]
+        }        
+        document.write(arr)
+        document.write('<br />')
+        document.write('sum = ' + sum)
+        document.write('<br />')
+        const avg = sum / arr.length
+        document.write('avg = ' + avg)
+        document.write('<br />')
+
+        
+        for (let i = 0; i < arr.length; i++) { 
+        
+        if (arr[i] < avg) {
+            document.write(arr[i] + " smaller than averge " + "<br>")
+        }
+        
+        else{
+            document.write(arr[i] + " higher than averge " + "<br>") 
+        }
+        }
+        ddocument.write('<br />')
+</script>
+    
+</body>
+</html>
