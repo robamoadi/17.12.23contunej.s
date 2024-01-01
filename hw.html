@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homework</title>
+</head>
+<body>
+   <script>
+     const arr= new Array(100).fill(55)
+     for (let i = 0; i < arr.length; i++) {
+        document.write(arr[i] + " ")
+     }
+     document.write("<br>")
+
+     const list=parseInt(prompt("length of the list"))
+        const number=parseInt(prompt("enter a number"))
+        const array= new Array(list).fill(number)
+        for (let i = 0; i < array.length; i++) {
+            document.write(array[i] + " ")
+            
+        }
+        document.write("<br>")
+        const student_in_class = parseInt(prompt('How many students?'))
+        const arr1 = new Array(student_in_class).fill(0)
+        for (let i = 0; i < arr1.length; i++) {
+            arr1[ i ] = parseInt(prompt('Enter grade for student array #' + i))
+        }
+        let sum = 0
+        for (let i = 0; i < arr1.length; i++) {
+            sum += arr1[ i ]
+        }      
+        const avg = sum / arr1.length
+        document.write('avg = ' + avg)
+        document.write('<br />')
+        let above_avg=0
+        let below_avg=0
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] < avg) {
+                below_avg++
+                document.write(below_avg + "below average" + "<br>")
+            }
+            else if(arr1[i] > avg) {
+                above_avg++
+                document.write(above_avg + "above average" + "<br>")
+            }
+        }
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] < 50) {
+                
+                document.write(arr1[i] + "weak" + "<br>")
+            }
+            else if(arr1[i] > 50 && arr1[i]<69) {
+                document.write(arr1[i] + "average" + "<br>")
+            }
+            else if(arr1[i] > 70 && arr1[i]<89) {
+                document.write(arr1[i] + "good" + "<br>")
+            }
+            else if(arr1[i] > 90) {
+                document.write(arr1[i] + "execellent" + "<br>")
+            }
+        }
+
+        
+
+
+
+
+
+   </script> 
+</body>
+</html>

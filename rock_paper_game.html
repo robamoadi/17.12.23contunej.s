@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rock Paper Scessier</title>
+    <style>
+        body{
+            background-color: rgb(71, 156, 196);
+        }
+        .one{
+            color: rgb(68, 67, 67);
+            text-align: center;
+            margin-top: 40px;
+        }
+        img{
+            margin-right: 100px;
+            margin-left: 200px;
+        }
+        div{
+            display: inline-block;
+        }
+        #hero{
+            text-align: center;
+            color: antiquewhite;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+        .two{
+            font-size: 40px;
+            font-weight: bold;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="one">Rock Paper Scessier</h1>
+    <div>
+        <p id="hero">You'r Card</p>
+    <img id="player_card" src="" alt="player_card" width="300" height="300">
+</div>
+<div>
+    <p id="hero">Computer Card</p>
+    <img id="comp_card" src="" alt="comp_card" width="300" height="300">
+</div>
+    <p class="two" id="score"></p>
+    <script>
+        const my_card = parseInt(Math.random() * 3) + 1
+        const computer_card = parseInt(Math.random() * 3) + 1
+
+        switch (my_card) {
+            case 1: document.getElementById("player_card").src = "game_image/rock.png"
+                break;
+            case 2: document.getElementById("player_card").src = "game_image/paper.png"
+                break;
+            case 3: document.getElementById("player_card").src = "game_image/scissors.png"
+                break;
+        }
+        document.write("<br>")
+        switch (computer_card) {
+            case 1: document.getElementById("comp_card").src = "game_image/rock.png"
+                break;
+            case 2: document.getElementById("comp_card").src = "game_image/paper.png"
+                break;
+            case 3: document.getElementById("comp_card").src = "game_image/scissors.png"
+                break;
+        }
+        if (my_card == computer_card) {
+            document.getElementById("score").innerHTML=("Draw!!")
+            
+        }
+        else if (my_card == 3 && computer_card == 1){
+            document.getElementById("score").innerHTML=("LOSER")
+        }
+        else if (my_card == 1 && computer_card == 3){
+            document.getElementById("score").innerHTML=("WINNER")
+        }
+        else if (my_card> computer_card){
+            document.getElementById("score").innerHTML=("WINNER")
+        }
+        else if (my_card < computer_card ){
+            document.getElementById("score").innerHTML=("LOSER")
+        }
+        
+    </script>
+
+</body>
+
+</html>
